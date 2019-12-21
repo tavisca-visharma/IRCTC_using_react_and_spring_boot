@@ -32,7 +32,7 @@ class AddStation extends Component {
             <div>
                 <Jumbotron style={{ backgroundColor: "whitesmoke" }}>
                     <label htmlFor="stationName">Station Name : </label> &nbsp;
-                    <input type="text" placeholder = "Enter Station Name" onBlur = {(event) => this.addStationName(event)}/> <br/>
+                    <input style = {{borderRadius : "4px", paddingLeft : "5px"}} type="text" placeholder = "Enter Station Name" onBlur = {(event) => this.addStationName(event)}/> <br/>
                     <Button variant="danger" onClick = {(event) => this.addStation(event)}>Add Station</Button>
                     
                     

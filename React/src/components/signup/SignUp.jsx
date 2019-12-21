@@ -9,6 +9,7 @@ function SignUp() {
 
     const [modalShow, setModalShow] = React.useState(false); 
 
+    console.log(modalShow,setModalShow)
     
         return (
             <ButtonToolbar>

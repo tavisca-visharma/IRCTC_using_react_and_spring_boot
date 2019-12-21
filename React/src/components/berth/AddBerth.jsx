@@ -14,11 +14,12 @@ class AddBerth extends Component {
         berthsSelected: []
     }
 
-    selectBerth(event) {
-        console.log(event);
-        let berth = event.substring(2)
+    selectBerth(event, berth) {
+        // console.log("event", event)
+        // console.log(berth.berthType);
+        
         this.setState({
-            selectedBerthType: berth
+            selectedBerthType: berth.berthType
         })
 
     }
@@ -40,13 +41,15 @@ class AddBerth extends Component {
 
         let flag = false
         let newBerthsSelected = this.state.berthsSelected
-        for (let berth in newBerthsSelected) {
-            if (berthType === newBerthsSelected[berth].berthType) {
-                newBerthsSelected[berth].seats = seats
+        for (let i in newBerthsSelected) {
+            if (berthType === newBerthsSelected[i].berthType) {
+                newBerthsSelected[i].seats = seats
                 flag = true
+                console.log("Hello")
             }
         }
         if (flag === false) {
+            console.log("world")
             newBerthsSelected.push({
                 berthType,
                 seats
@@ -65,13 +68,13 @@ class AddBerth extends Component {
             <div>
                 <Jumbotron style={{ backgroundColor: "whitesmoke" }}>
                     <Dropdown>
-                        <Dropdown.Toggle variant="warning" id="dropdown-basic">
+                        <Dropdown.Toggle variant="warning" id="dropdown-berth">
                             {this.state.selectedBerthType}
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
                             {this.state.berthTypes.map((berthType, index) =>
-                                <Dropdown.Item key={index} href={"#/" + berthType} onSelect={(event) => this.selectBerth(event)}> {berthType} </Dropdown.Item>
+                                <Dropdown.Item key={index} eventKey = "0" onSelect={(event) => this.selectBerth(event,{berthType})}> {berthType} </Dropdown.Item>
                             )}
                         </Dropdown.Menu>
                     </Dropdown>

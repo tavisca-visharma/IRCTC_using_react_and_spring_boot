@@ -26,21 +26,21 @@ class SignUpModal extends Component {
                 </Modal.Header>
                 <Modal.Body>
                     <Form>
-                        <Form.Group controlId="formBasicEmail">
+                        <Form.Group controlId="Email">
                             <Form.Label><h5>Email</h5></Form.Label>
                             <Form.Control type="email" placeholder="Enter your email" />
                         </Form.Group>
 
-                        <Form.Group controlId="formBasicPassword">
+                        <Form.Group controlId="Password">
                             <Form.Label><h5>Password</h5></Form.Label>
                             <Form.Control type="password" placeholder="Password" />
                         </Form.Group>
 
-                        <Form.Group controlId="formBasicConfirmPassword">
+                        <Form.Group controlId="ConfirmPassword">
                             <Form.Label><h5>Confirm Password</h5></Form.Label>
                             <Form.Control type="password" placeholder="Confirm Password" />
                         </Form.Group>
-                        <Button centered variant="danger" type="submit"> Sign Up </Button>
+                        <Button centered = "true" variant="danger" type="submit"> Sign Up </Button>
                     </Form>
                 </Modal.Body>
                 {/* <Modal.Footer>

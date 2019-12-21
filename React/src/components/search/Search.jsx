@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Row, Col, Form, Button } from "react-bootstrap";
+import { Row, Col, Form, Button, Jumbotron, Container } from "react-bootstrap";
+import TrainList from '../train/TrainList'
 
 class Search extends Component {
   constructor(props) {
@@ -7,6 +8,7 @@ class Search extends Component {
     this.state = {
       fromStation: "",
       toStation: "",
+      trains : [],
       date: ""
     };
 
@@ -44,39 +46,47 @@ class Search extends Component {
 
   render() {
     return (
-      <Form onSubmit={this.handleSubmit}>
-        <Row>
-          <Col>
-            <Form.Group controlId="fromStation">
-              <Form.Label>From</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="From"
-                onChange={this.handleChangeOnfromStation}
-              />
-            </Form.Group>
-          </Col>
-          <Col>
-            <Form.Group controlId="toStation">
-              <Form.Label>To</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="To"
-                onChange={this.handleChangeOntoStation}
-              />
-            </Form.Group>
-          </Col>
-          <Col>
-            <Form.Group controlId="date">
-              <Form.Label>Date</Form.Label>
-              <Form.Control type="date" onChange={this.handleChangeOnDate} />
-            </Form.Group>
-          </Col>
-        </Row>
-        <Button variant="primary" type="submit" value="Submit">
-          Search
-        </Button>
-      </Form>
+      <Container>
+        <Jumbotron>
+          <Form onSubmit={this.handleSubmit}>
+            <Row>
+              <Col>
+                <Form.Group controlId="fromStation">
+                  <Form.Label>From</Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="From"
+                    onChange={this.handleChangeOnfromStation}
+                  />
+                </Form.Group>
+              </Col>
+              <Col>
+                <Form.Group controlId="toStation">
+                  <Form.Label>To</Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="To"
+                    onChange={this.handleChangeOntoStation}
+                  />
+                </Form.Group>
+              </Col>
+              <Col>
+                <Form.Group controlId="date">
+                  <Form.Label>Date</Form.Label>
+                  <Form.Control type="date" onChange={this.handleChangeOnDate} />
+                </Form.Group>
+              </Col>
+            </Row>
+            <Button variant="primary" type="submit" value="Submit">
+              Search
+            </Button>
+          </Form>
+        </Jumbotron>
+        <br />
+        <Jumbotron style={{ backgroundColor: "lightyellow" }}>
+          <TrainList source={this.state.fromStation} destination={this.state.toStation} trains={this.state.trains} />
+        </Jumbotron>
+      </Container>
     );
   }
 }
