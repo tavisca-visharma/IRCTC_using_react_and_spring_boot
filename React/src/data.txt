@@ -264,3 +264,111 @@ User
 			}
 			]
 }
+
+
+---------------------------------------------------------------------
+
+[
+        {
+          id: 12830,
+          name: "Intercity",
+          originatingTime: "2019-12-19T04:41:47.736537Z",
+          stops: [
+            {
+              id: 25,
+              arrivalTime: "2019-12-19T04:41:47.723537Z",
+              departureTime: "2019-12-19T04:41:47.723537Z",
+              distanceTravelled: 200,
+              currentAvailability: {
+                SECOND_AC: 5
+              },
+              stationName: "Pune"
+            },
+            {
+              id: 26,
+              arrivalTime: "2019-12-19T04:41:47.726537Z",
+              departureTime: "2019-12-19T04:41:47.726537Z",
+              distanceTravelled: 200,
+              currentAvailability: {
+                SLEEPER: 8,
+                SECOND_AC: 10,
+                FIRST_AC: 5
+              },
+              stationName: "Mumbai"
+            },
+            {
+              id: 27,
+              arrivalTime: "2019-12-19T04:41:47.726537Z",
+              departureTime: "2019-12-19T04:41:47.726537Z",
+              distanceTravelled: 500,
+              currentAvailability: {
+                FIRST_AC: 5
+              },
+              stationName: "Andheri"
+            },
+            {
+              id: 28,
+              arrivalTime: "2019-12-19T04:41:47.726537Z",
+              departureTime: "2019-12-19T04:41:47.726537Z",
+              distanceTravelle: 550,
+              currentAvailability: {
+                FIRST_AC: 10
+              },
+              stationName: "Dadar"
+            }
+          ],
+          farePerKM: {
+            SECOND_AC: 5.2,
+            FIRST_AC: 3.0
+          },
+          totalSeats: {
+            SECOND_AC: 5,
+            FIRST_AC: 3
+          }
+        },
+        {
+          id: 12831,
+          name: "Intercity-EXp",
+          originatingTime: "2019-12-19T04:41:47.736537Z",
+          stops: [
+            {
+              id: 1,
+              arrivalTime: "2019-12-19T04:41:47.723537Z",
+              departureTime: "2019-12-19T04:41:47.723537Z",
+              distanceTravelled: 200,
+              currentAvailability: {
+                SECOND_AC: 5
+              },
+              stationName: "Pune"
+            },
+            {
+              id: 2,
+              arrivalTime: "2019-12-19T04:41:47.726537Z",
+              departureTime: "2019-12-19T04:41:47.726537Z",
+              distanceTravelled: 200,
+              currentAvailability: {
+                FIRST_AC: 5
+              },
+              stationName: "Mumbai"
+            },
+            {
+              id: 3,
+              arrivalTime: "2019-12-19T04:41:47.726537Z",
+              departureTime: "2019-12-19T04:41:47.726537Z",
+              distanceTravelled: 500,
+              currentAvailability: {
+                FIRST_AC: 5
+              },
+              stationName: "Andheri"
+            }
+          ],
+          farePerKM: {
+            SECOND_AC: 5.2,
+            FIRST_AC: 3.0
+          },
+          totalSeats: {
+            SECOND_AC: 5,
+            FIRST_AC: 3
+          }
+        }
+      ]

@@ -2,33 +2,18 @@ import React, { Component } from "react";
 import { Row, Col, Form, Button, Jumbotron, Container } from "react-bootstrap";
 import TrainList from '../train/TrainList'
 
+
+const IP_ADDRESS = ""
+
 class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
       fromStation: undefined,
       toStation: undefined,
-      trains: [{
-        number: "12345",
-        name: "Vishal Express",
-        stops: [
-            { name: "Pune", arrivalTime: "7:30 PM", departureTime: "9:32 AM" },
-            { name: "Pune", arrivalTime: "7:30 PM", departureTime: "9:32 AM" },
-            { name: "Mumbai", arrivalTime: "7:30 PM", departureTime: "9:32 AM" },
-            { name: "Pune", arrivalTime: "7:30 PM", departureTime: "9:32 AM" },
-            { name: "Pune", arrivalTime: "7:30 PM", departureTime: "9:32 AM" }
-        ]
-    },
-    {
-        number: "6789",
-        name: "Sushovan Express",
-        stops: [
-            { name: "Pune", arrivalTime: "7:30 PM", departureTime: "9:32 AM" },
-            { name: "Pune", arrivalTime: "7:30 PM", departureTime: "9:32 AM" },
-        ]
-    }],
+      trains: [],
       date: undefined,
-      formSubmitted : false
+      formSubmitted: false
     };
 
     this.handleChangeOnfromStation = this.handleChangeOnfromStation.bind(this);
@@ -38,10 +23,36 @@ class Search extends Component {
   }
 
 
-  apiCall(){
+  apiCallForSearch() {
     // In this function full train details will be fetched including the timeline
     // which contains stops and their arrival and departure time
     // also seat availability and seats per quota will also be there
+
+
+    // let payload = {
+
+    //   from: this.state.fromStation,
+    //   to: this.state.toStation,
+    //   date: this.state.date
+    // }
+
+    // console.log(payload)
+    fetch(IP_ADDRESS + "/searchTrains/" + this.state.fromStation + "/" + this.state.toStation, {
+      method: 'get',
+      headers: {
+        "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      // body: payload
+    })
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          trains: data
+        })
+      })
+      .catch(function (error) {
+        console.log('Request failed', error);
+      });
   }
 
   handleChangeOnfromStation(event) {
@@ -68,8 +79,10 @@ class Search extends Component {
   handleSubmit(event) {
     event.preventDefault();
     this.setState({
-      formSubmitted : true
+      formSubmitted: true
     })
+
+    this.apiCallForSearch();
     console.log(this.state);
   }
 
@@ -105,7 +118,7 @@ class Search extends Component {
               <Col>
                 <Form.Group controlId="date">
                   <Form.Label> <h5>Date</h5> </Form.Label>
-                  <Form.Control type="date" onChange={this.handleChangeOnDate} required/>
+                  <Form.Control type="date" onChange={this.handleChangeOnDate} required />
                 </Form.Group>
               </Col>
             </Row>
@@ -115,11 +128,11 @@ class Search extends Component {
           </Form>
         </Jumbotron>
         <br />
-        <TrainList isSubmitted = {this.state.formSubmitted}
-                   source={this.state.fromStation} 
-                   destination={this.state.toStation} 
-                   trains={this.state.trains} 
-                   />
+        <TrainList isSubmitted={this.state.formSubmitted}
+          source={this.state.fromStation}
+          destination={this.state.toStation}
+          trains={this.state.trains}
+        />
       </Container>
     );
   }

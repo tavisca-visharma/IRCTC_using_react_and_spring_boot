@@ -61,7 +61,7 @@ class TrainList extends Component {
                                 {this.props.trains.map((train, index) =>
 
                                     <tr key={index}>
-                                        <td onClick={(event) => this.displayTimeline(event, index)}>{train.number}</td>
+                                        <td onClick={(event) => this.displayTimeline(event, index)}>{train.id}</td>
                                         <td onClick={(event) => this.displayTimeline(event, index)}>{train.name}</td>
                                         <td onClick={(event) => this.displayTimeline(event, index)}>{train.stops[0].arrivalTime}</td>
                                         <td onClick={(event) => this.displayTimeline(event, index)}>{train.stops[0].departureTime}</td>

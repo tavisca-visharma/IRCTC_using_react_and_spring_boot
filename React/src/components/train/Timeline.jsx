@@ -39,7 +39,7 @@ class TrainTimeline extends Component {
 
                                     <TimelineItem
                                         key={index}
-                                        dateText={stop.name}
+                                        dateText={stop.stationName}
                                         dateInnerStyle={{
                                             background: this.state.background_colors[(index % this.state.background_colors.length)],
                                             // color : this.state.colors[(index % this.state.colors.length) ]
@@ -51,7 +51,7 @@ class TrainTimeline extends Component {
                                             boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
                                         }}
                                     >
-                                        <h3 style={{ color: 'brown' }}>{stop.name}</h3>
+                                        <h3 style={{ color: 'brown' }}>{stop.stationName}</h3>
                                         <br />
                                         <Row>
                                             <Col>
