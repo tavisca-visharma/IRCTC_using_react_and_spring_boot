@@ -86,7 +86,17 @@ class AddTrain extends Component {
     addStation(stationValue) {
 
         let new_station_details = this.state.station_details
+        let flag = false
+        for (let i in new_station_details) {
+            if (new_station_details[i].stationName === stationValue.stationName) {
+                new_station_details[i].arrivalTime = stationValue.arrivalTime
+                new_station_details[i].departureTime = stationValue.departureTime
+                flag = true
+            }
+        }
+        if (flag === false) {
         new_station_details.push(stationValue)
+    }
         this.setState({
             station_details: new_station_details
         })

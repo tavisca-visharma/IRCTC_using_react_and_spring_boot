@@ -12,10 +12,9 @@ class AddBooking extends Component {
     }
 
 
-    selectGender(event){
-        let gender = event.substring(2)
+    selectGender(event,gender){
         this.setState({
-            selectedGender : gender
+            selectedGender : gender.gender
         })
     }
 
@@ -33,14 +32,30 @@ class AddBooking extends Component {
         })
     }
 
-    handleSubmit(){
+    handleSubmit(event){
+        event.preventDefault()
         let newPassengersList = this.state.passengers;
         let name = this.state.passengerName
         let age = this.state.passengerAge
         let gender = this.state.selectedGender
+
+        if(gender === "Select Gender")
+        return;
+        
+        let flag = false
+
+        for (let i in newPassengersList){
+            if(name === newPassengersList[i].name && age === newPassengersList[i].age){
+                newPassengersList[i].gender = gender
+                flag = true
+            }
+        }
+
+        if (flag === false){
         newPassengersList.push({
             name,age,gender
         })
+    }
 
         this.setState({
             passengers : newPassengersList
@@ -57,25 +72,27 @@ class AddBooking extends Component {
     render() {
         return (
             <div>
-                <Form onSubmit={() => this.handleSubmit()}>
+                <Form>
                     <Row>
                         <Col>
                             <Form.Group controlId="name">
-                                <Form.Label>Name</Form.Label>
+                                <Form.Label> <h5>Name</h5> </Form.Label>
                                 <Form.Control
                                     type="text"
                                     placeholder="Name"
                                     onChange={(event) => this.addName(event)}
+                                    required
                                 />
                             </Form.Group>
                         </Col>
                         <Col>
                             <Form.Group controlId="Age">
-                                <Form.Label>Age</Form.Label>
+                                <Form.Label>  <h5>Age</h5> </Form.Label>
                                 <Form.Control
                                     type="number"
-                                    placeholder="To"
+                                    placeholder="Age"
                                     onChange={(event) => this.addAge(event)}
+                                    required
                                 />
                             </Form.Group>
                         </Col>
@@ -87,13 +104,13 @@ class AddBooking extends Component {
 
                                 <Dropdown.Menu>
                                     {this.state.gender.map((gender, index) =>
-                                        <Dropdown.Item key={index} href={"#/" + gender} onSelect={(event) => this.selectGender(event)}> {gender} </Dropdown.Item>
+                                        <Dropdown.Item key={index} eventKey = "0" onSelect={(event) => this.selectGender(event, {gender})}> {gender} </Dropdown.Item>
                                     )}
                                 </Dropdown.Menu>
                             </Dropdown>
                         </Col>
                     </Row>
-                    <Button variant="primary" type="submit" value="Submit">
+                    <Button onClick = {(event) => this.handleSubmit(event)} variant="primary" value="Submit">
                         Add Passenger
                     </Button>
                 </Form>

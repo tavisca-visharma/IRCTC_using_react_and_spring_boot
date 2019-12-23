@@ -48,7 +48,7 @@ class BookingDetails extends Component {
             return (
                 <div>
                     <br />
-                    <Alert variant="danger">No Passengers</Alert>
+                    <Alert variant="danger"> <h5>No Passengers</h5> </Alert>
                 </div>
             )
         }

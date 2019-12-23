@@ -109,7 +109,7 @@ class BookingHistory extends Component {
                                 <Col>
                                     <Form.Group controlId="form">
                                         <Form.Label>
-                                            Enter the booking id you want to delete
+                                            <h5>Enter the booking id you want to delete</h5> 
                     </Form.Label>
                                         <Form.Control
                                             type="number"

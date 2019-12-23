@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button, Jumbotron, Container } from 'react-bootstrap'
+import { Form, Button, Jumbotron, Container, Row, Col } from 'react-bootstrap'
 
 
 class Login extends Component {
@@ -21,15 +21,20 @@ class Login extends Component {
                             <Form.Label><h3>Password</h3></Form.Label>
                             <Form.Control type="password" placeholder="Password" />
                         </Form.Group>
-                        
-                        <Form.Group controlId="role">
-                            <Form.Label><h3>User</h3></Form.Label>
-                            <Form.Control type="radio" placeholder="user" />
-                        </Form.Group>
-                        <Form.Group controlId="role">
-                            <Form.Label><h3>Admin</h3></Form.Label>
-                            <Form.Control type="radio" placeholder="admin" />
-                        </Form.Group>
+                        <Row>
+                            <Col>
+                                <Form.Group controlId="role">
+                                    <Form.Label><h3>User</h3></Form.Label>
+                                    <Form.Control name="role" type="radio" placeholder="user" />
+                                </Form.Group>
+                            </Col>
+                            <Col><Form.Group controlId="role">
+                                <Form.Label><h3>Admin</h3></Form.Label>
+                                <Form.Control name="role" type="radio" placeholder="admin" />
+                            </Form.Group>
+                            </Col>
+                        </Row>
+                        <br />
                         <Button variant="success" type="submit">Login</Button>
                     </Form>
                 </Jumbotron>

@@ -76,7 +76,7 @@ class AddQuota extends Component {
                         </Dropdown.Menu>
                     </Dropdown>
                     <br />
-                    <label>No. Of Seats : </label> &nbsp;
+                    <label> <h5>No. Of Seats :</h5>  </label> &nbsp;
                     <input id="no_of_seats_of_quota" type="number" min="0" required onBlur={(event) => this.selectCount(event)} /> <br />&nbsp;
                     <Button variant="primary" onClick={(event) => this.addQuota(event)}>Add Quota</Button>
 

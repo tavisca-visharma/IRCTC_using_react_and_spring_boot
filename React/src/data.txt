@@ -1,0 +1,266 @@
+[
+    {
+        "id": 12830,
+        "name": "Intercity",
+        "originatingTime": "2019-12-19T04:41:47.736537Z",
+        "stops": [
+            {
+                "id": 25,
+                "arrivalTime": "2019-12-19T04:41:47.723537Z",
+                "departureTime": "2019-12-19T04:41:47.723537Z",
+                "distanceTravelled": 200,
+                "currentAvailability": {
+                    "SECOND_AC": 5
+                },
+                "stationName": "Pune"
+            },
+            {
+                "id": 26,
+                "arrivalTime": "2019-12-19T04:41:47.726537Z",
+                "departureTime": "2019-12-19T04:41:47.726537Z",
+                "distanceTravelled": 200,
+                "currentAvailability": {
+                    "SLEEPER": 8,
+                    "SECOND_AC": 10,
+                    "FIRST_AC": 5
+                },
+                "stationName": "Mumbai"
+            },
+            {
+                "id": 27,
+                "arrivalTime": "2019-12-19T04:41:47.726537Z",
+                "departureTime": "2019-12-19T04:41:47.726537Z",
+                "distanceTravelled": 500,
+                "currentAvailability": {
+                    "FIRST_AC": 5
+                },
+                "stationName": "Andheri"
+            },
+            {
+                "id": 28,
+                "arrivalTime": "2019-12-19T04:41:47.726537Z",
+                "departureTime": "2019-12-19T04:41:47.726537Z",
+                "distanceTravelled": 550,
+                "currentAvailability": {
+                    "FIRST_AC": 10
+                },
+                "stationName": "Dadar"
+            }
+        ],
+        "farePerKM": {
+            "SECOND_AC": 5.2,
+            "FIRST_AC": 3.0
+        },
+        "totalSeats": {
+            "SECOND_AC": 5,
+            "FIRST_AC": 3
+        }
+    },
+    {
+        "id": 12831,
+        "name": "Intercity-EXp",
+        "originatingTime": "2019-12-19T04:41:47.736537Z",
+        "stops": [
+            {
+                "id": 1,
+                "arrivalTime": "2019-12-19T04:41:47.723537Z",
+                "departureTime": "2019-12-19T04:41:47.723537Z",
+                "distanceTravelled": 200,
+                "currentAvailability": {
+                    "SECOND_AC": 5
+                },
+                "stationName": "Pune"
+            },
+            {
+                "id": 2,
+                "arrivalTime": "2019-12-19T04:41:47.726537Z",
+                "departureTime": "2019-12-19T04:41:47.726537Z",
+                "distanceTravelled": 200,
+                "currentAvailability": {
+                    "FIRST_AC": 5
+                },
+                "stationName": "Mumbai"
+            },
+            {
+                "id": 3,
+                "arrivalTime": "2019-12-19T04:41:47.726537Z",
+                "departureTime": "2019-12-19T04:41:47.726537Z",
+                "distanceTravelled": 500,
+                "currentAvailability": {
+                    "FIRST_AC": 5
+                },
+                "stationName": "Andheri"
+            }
+        ],
+        "farePerKM": {
+            "SECOND_AC": 5.2,
+            "FIRST_AC": 3.0
+        },
+        "totalSeats": {
+            "SECOND_AC": 5,
+            "FIRST_AC": 3
+        }
+    },
+    {
+        "id": 12832,
+        "name": "CoalField",
+        "originatingTime": "2019-12-19T04:41:47.736537Z",
+        "stops": [
+            {
+                "id": 7,
+                "arrivalTime": "2019-12-19T04:41:47.723537Z",
+                "departureTime": "2019-12-19T04:41:47.723537Z",
+                "distanceTravelled": 200,
+                "currentAvailability": {
+                    "SECOND_AC": 5
+                },
+                "stationName": "Dhanbad"
+            },
+            {
+                "id": 8,
+                "arrivalTime": "2019-12-19T04:41:47.726537Z",
+                "departureTime": "2019-12-19T04:41:47.726537Z",
+                "distanceTravelled": 200,
+                "currentAvailability": {
+                    "FIRST_AC": 5
+                },
+                "stationName": "Asansol"
+            },
+            {
+                "id": 9,
+                "arrivalTime": "2019-12-19T04:41:47.726537Z",
+                "departureTime": "2019-12-19T04:41:47.726537Z",
+                "distanceTravelled": 500,
+                "currentAvailability": {
+                    "FIRST_AC": 5
+                },
+                "stationName": "Kolkata"
+            }
+        ],
+        "farePerKM": {
+            "SECOND_AC": 5.2,
+            "FIRST_AC": 3.0
+        },
+        "totalSeats": {
+            "SECOND_AC": 5,
+            "FIRST_AC": 3
+        }
+    },
+    {
+        "id": 12834,
+        "name": "BlackDiamond",
+        "originatingTime": "2019-12-19T04:41:47.736537Z",
+        "stops": [
+            {
+                "id": 10,
+                "arrivalTime": "2019-12-19T04:41:47.723537Z",
+                "departureTime": "2019-12-19T04:41:47.723537Z",
+                "distanceTravelled": 0,
+                "currentAvailability": {
+                    "SECOND_AC": 3
+                },
+                "stationName": "Dhanbad"
+            },
+            {
+                "id": 11,
+                "arrivalTime": "2019-12-19T04:41:47.726537Z",
+                "departureTime": "2019-12-19T04:41:47.726537Z",
+                "distanceTravelled": 200,
+                "currentAvailability": {
+                    "FIRST_AC": 5
+                },
+                "stationName": "Asansol"
+            },
+            {
+                "id": 12,
+                "arrivalTime": "2019-12-19T04:41:47.726537Z",
+                "departureTime": "2019-12-19T04:41:47.726537Z",
+                "distanceTravelled": 500,
+                "currentAvailability": {
+                    "FIRST_AC": 3
+                },
+                "stationName": "Durgapur"
+            },
+            {
+                "id": 13,
+                "arrivalTime": "2019-12-19T04:41:47.726537Z",
+                "departureTime": "2019-12-19T04:41:47.726537Z",
+                "distanceTravelled": 1000,
+                "currentAvailability": {
+                    "FIRST_AC": 8
+                },
+                "stationName": "Kolkata"
+            }
+        ],
+        "farePerKM": {
+            "SECOND_AC": 5.2,
+            "FIRST_AC": 3.0
+        },
+        "totalSeats": {
+            "SECOND_AC": 5,
+            "FIRST_AC": 3
+        }
+    }
+]
+
+booking
+{
+    "id": 7,
+    "trainId": 12830,
+    "trainName": "Intercity",
+    "bookingDate": "2019-12-22T09:32:18.622199Z",
+    "journeyDate": "2019-12-22T09:32:18.622199Z",
+    "price": 500.0,
+    "berthType": "SECOND_AC",
+    "source": "Pune",
+    "destination": "Mumbai",
+    "distance": 500,
+    "passengerList": [
+        {
+            "id": 1,
+            "name": "A",
+            "gender": "MALE",
+            "age": 20
+        },
+        {
+            "id": 2,
+            "name": "B",
+            "gender": "FEMALE",
+            "age": 20
+        }
+    ]
+}
+
+User
+
+{
+	"id":2,
+	"name":"vikas",
+	"age":23,
+	"gender":0,
+	"email":"vikas@gmail.com",
+	"password":12345,
+	"role":1,
+	"tickets":[{
+	  
+	    "trainId": 12830,
+	    "trainName": "Intercity",
+	    "bookingDate": "2019-12-22T09:32:18.622199Z",
+	    "journeyDate": "2019-12-22T09:32:18.622199Z",
+	    "price": 500.0,
+	    "berthType": "SECOND_AC",
+	    "source": "Pune",
+	    "destination": "Mumbai",
+	    "distance": 500,
+	    "passengerList": [
+	    	{
+	    	"name":"A",
+	    	"gender":0,
+	    	"age":20
+	    	},
+	    	{"name":"B",
+	    	"gender":1,
+	    	"age":20}]
+			}
+			]
+}

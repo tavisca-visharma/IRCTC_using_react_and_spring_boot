@@ -64,7 +64,7 @@ class NavigationBar extends Component {
             <Nav.Item>
               <Nav.Link href="/">Home</Nav.Link>
             </Nav.Item>
-            <Nav.Item>
+            {/* <Nav.Item>
               <Nav.Link href="/search">Search</Nav.Link>
             </Nav.Item>
             <Nav.Item>
@@ -79,7 +79,7 @@ class NavigationBar extends Component {
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="/bookingHistory">History</Nav.Link>
-            </Nav.Item>
+            </Nav.Item> */}
             <Nav.Item>
               <Nav.Link href="/about">About</Nav.Link>
             </Nav.Item>
